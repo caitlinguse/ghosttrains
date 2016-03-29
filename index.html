@@ -12,6 +12,15 @@
 <body>
     <h1>Ghost Railroads and Stations of Ontario</h1>
     <div id='map' class='map'> </div>
+    <div class='map-overlay top'>
+        <div class='map-overlay-inner'>
+            <h2>Time Periods</h2>
+            <label id='period'></label>
+            <input id='slider' type='range' min='1890' max='1960' step='20' value='0' />
+        </div>
+    </div>
+    
     <script src='map.js'></script>
+    <script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
 </body>
 </html>

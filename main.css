@@ -4,9 +4,34 @@ body {
 }
 
 #map { 
-    position: absolute; 
+    position: fixed; 
     top: 100px; 
     bottom:0; 
     width:90%; 
     height: 80%;
+}
+
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    width: 25%;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.map-overlay h2 {
+    position: fixed;
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+    bottom: 20px;
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    cursor: ew-resize;
 }
