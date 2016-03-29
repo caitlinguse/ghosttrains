@@ -40,9 +40,26 @@ function filterBy(period, index) {
     // Set the label to the month
     periodLabel.textContent = periods[period];
 }
-/*
-map.on('style.load', function() {
 
+map.on('style.load', function() {
+    
+    map.addSource('importantpoints', {
+            'type': 'geojson',
+            'data': 'data/importantpoints.geojson'
+        });
+    map.addLayer({
+      "id": "pointsLayer",
+      "type": "circle",
+      "source": "importantpoints",
+      "layout": {},
+      "paint":{
+        'circle-color': "black",
+        'circle-radius': 5,
+        'circle-opacity': 1
+      }
+      
+  });
+/*
     // Here we're using d3 to help us make the ajax request but you can use
     // Any request method (library or otherwise) you wish.
     d3.json('/mapbox-gl-js/assets/data/significant-earthquakes-2015.geojson', function(err, data) {
@@ -141,5 +158,5 @@ map.on('style.load', function() {
                 .addTo(map);
         });
     });
+    */
 });
-*/
