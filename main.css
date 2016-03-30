@@ -3,6 +3,22 @@ body {
     padding:0; 
 }
 
+h1 {
+    font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+#header {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: antiquewhite
+}
+
 #map { 
     position: fixed; 
     top: 100px; 
