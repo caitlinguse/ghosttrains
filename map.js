@@ -26,6 +26,24 @@ periodLabel.textContent = periods[periodIndex];
 
 map.on('style.load', function() {
     
+    map.addSource('railway', {
+            'type': 'vector',
+            'url': 'mapbox://caitlinguse.8fecs4bb'
+        });
+    
+    map.addLayer({
+      "id": "railwayline",
+      "type": "circle",
+      "source": "railway",
+      "layout": {},
+      "paint":{
+          'circle-color': "black",
+        'circle-radius': 5
+      },
+    "source-layer": "Stations"
+      
+  });
+    
     map.addSource('importantpoints', {
             'type': 'geojson',
             'data': 'data/importantpoints.geojson'
@@ -50,46 +68,13 @@ map.on('style.load', function() {
             periodLabel.textContent = periods[periodIndex];
             popup.remove();
         });
-/*
-        map.on('mousemove', function(e) {
-            var features = map.queryRenderedFeatures(e.point, { layers: layerIDs });
-            // Change the cursor style as a UI indicator.
-            map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-        });
-
-        map.on('click', function(e) {
-            var features = map.queryRenderedFeatures(e.point, { layers: layerIDs });
-            if (!features.length) {
-                popup.remove();
-                return;
-            }
-
-            var feature = features[0];
-
-            var link = document.createElement('a');
-            link.href = feature.properties.url;
-            link.target = '_blank';
-            link.textContent = feature.properties.place;
-
-            // Use wrapped coordinates to ensure longitude is within (180, -180)
-            var coords = feature.geometry.coordinates;
-            var ll = new mapboxgl.LngLat(coords[0], coords[1]);
-            var wrapped = ll.wrap();
-
-            // Center the map to its point.
-            map.flyTo({ center: wrapped });
-            popup.setLngLat(wrapped)
-                .setHTML(link.outerHTML)
-                .addTo(map);
-        });
-    
-    */
 });
 
 var popup = new mapboxgl.Popup({
   closeButton: true,
   closeOnClick: true
 });
+
 map.on("click", function(e) {
     map.featuresAt(e.point, {
         radius: 5,
