@@ -55,6 +55,7 @@ map.on('style.load', function() {
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {
             periodIndex = parseInt(e.target.value, 10);
+            popup.remove();
         });
 /*
         map.on('mousemove', function(e) {
