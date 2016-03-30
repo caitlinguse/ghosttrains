@@ -12,12 +12,8 @@ var popup = new mapboxgl.Popup({
     closeButton: false
 });
 
-var periodLabel = document.getElementById('period');
+var periodLabel = document.getElementById('labels');
 var periodIndex = 0;
-
-// Will contain the layers we wish to interact with on
-// during map mouseover and click events.
-var layerIDs = [];
 
 var periods = [
     '1890-1910',
@@ -25,12 +21,8 @@ var periods = [
     '1931-1950',
     '1951-1970'
 ];
+periodLabel.textContent = periods[periodIndex];
 
-function filterBy(period, index) {
-
-    // Set the label to the month
-    periodLabel.textContent = periods[period];
-}
 
 map.on('style.load', function() {
     
@@ -55,6 +47,7 @@ map.on('style.load', function() {
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {
             periodIndex = parseInt(e.target.value, 10);
+            periodLabel.textContent = periods[periodIndex];
             popup.remove();
         });
 /*

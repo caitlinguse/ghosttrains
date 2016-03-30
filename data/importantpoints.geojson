@@ -2,7 +2,7 @@
 "type":"FeatureCollection",
 "features":[{
     "type":"Feature",
-    "properties": [{"Name":"Highland Inn"}, {"Name": "Lowland Inn"}],
+    "properties": [{"Name":"Highland Inn"}],
     "geometry":{
         "type":"Point",
         "coordinates":[-78.59513998031616,45.55168379775144]

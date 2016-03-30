@@ -27,6 +27,12 @@ h1 {
     height: 80%;
 }
 
+#labels {
+    position: fixed;
+    padding: 10px;
+    bottom: 3px;
+}
+
 .map-overlay {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     width: 25%;
@@ -50,4 +56,5 @@ h1 {
     width: 100%;
     margin: 0;
     cursor: ew-resize;
+    padding: 15px;
 }
