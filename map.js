@@ -61,7 +61,9 @@ map.on('style.load', function() {
       }
       
   });
-  swal({   title: "Welcome!",   text: "Here's my message!",   confirmButtonText: "Cool" });
+  
+    swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: "Here's my message!",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
+    
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {
             periodIndex = parseInt(e.target.value, 10);
