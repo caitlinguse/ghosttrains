@@ -61,7 +61,7 @@ map.on('style.load', function() {
       }
       
   });
-
+  swal({   title: "Welcome!",   text: "Here's my message!",   confirmButtonText: "Cool" });
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {
             periodIndex = parseInt(e.target.value, 10);
