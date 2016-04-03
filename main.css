@@ -5,11 +5,12 @@ body {
 
 h1 {
     font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
-	font-size: 24px;
+	font-size: 45px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26px;
+    text-align: center;
 }
 
 #header {
@@ -19,26 +20,34 @@ h1 {
     background-color: antiquewhite
 }
 
+.center {
+    margin:auto;
+    width: 90%;
+}
+
 #map { 
     position: fixed; 
     top: 100px; 
     bottom:0; 
-    width:90%; 
-    height: 80%;
+    width: 90%; 
+    height: 75%;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 #labels {
     position: fixed;
     padding: 10px;
-    bottom: 3px;
+    bottom: 18px;
 }
 
 .map-overlay {
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font: 14px/20px 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
     width: 25%;
     position: absolute;
     left: 30px;
-    bottom: 30px;
+    bottom: 40px;
 }
 
 .map-overlay h2 {
@@ -46,7 +55,7 @@ h1 {
     line-height: 24px;
     display: block;
     margin: 0 0 10px;
-    bottom: 20px;
+    bottom: 35px;
 }
 
 .map-overlay input {
@@ -56,5 +65,5 @@ h1 {
     width: 100%;
     margin: 0;
     cursor: ew-resize;
-    padding: 15px;
+    padding: 10px;
 }

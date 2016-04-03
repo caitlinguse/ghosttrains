@@ -3,9 +3,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY2FpdGxpbmd1c2UiLCJhIjoiY2lqbm4zZTNuMDBvM3Vmb
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/caitlinguse/cildvdt1e00969nkiutencff7',
-  center: [-79.9, 44.40],
-  zoom: 6.0
+  center: [-77.94, 45.28],
+  zoom: 7.0
 });
+
+map.addControl(new mapboxgl.Navigation());
 
 var popup = new mapboxgl.Popup({
     closeOnClick: false,
@@ -62,7 +64,7 @@ map.on('style.load', function() {
       
   });
   
-    swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: "The Ottawa, Arnprior, and Parry Sound Railway connected Ontario cities from 1897 to 1959. While its presence permitted the growth of these cities for a period of time, its discontinued use also encouraged some to decline in more recent years." + "</br></br>" + "To explore the impacts of the railway throughout history, click 'Fly To' to be brought to different locations along the now abandoned tracks. While at a location, adjust the Time Period slider to view information for each period.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
+    swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: "The Ottawa, Arnprior, and Parry Sound Railway connected Ontario cities from 1897 to 1959. While its presence permitted the growth of these cities for a period of time, its discontinued use also encouraged some to decline in more recent years." + "</br></br>" + "To explore the impacts of the railway throughout history, click 'Fly To' to be brought to different locations along the now abandoned tracks. At some locations, you will be able to view maps from that time period over the modern basemap. While at a location, adjust the Time Period slider to view information for each period.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
     
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {
