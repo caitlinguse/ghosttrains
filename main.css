@@ -67,3 +67,10 @@ h1 {
     cursor: ew-resize;
     padding: 10px;
 }
+
+#footer {
+    font: 13px 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
+    position: fixed;
+    right: 10px;
+    bottom: 3px;
+}

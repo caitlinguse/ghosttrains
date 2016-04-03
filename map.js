@@ -28,15 +28,15 @@ periodLabel.textContent = periods[periodIndex];
 
 map.on('style.load', function() {
     
-    map.addSource('railway', {
+    map.addSource('stations', {
             'type': 'vector',
             'url': 'mapbox://caitlinguse.8fecs4bb'
         });
     
     map.addLayer({
-      "id": "railwayline",
+      "id": "railwaystations",
       "type": "circle",
-      "source": "railway",
+      "source": "stations",
       "layout": {},
       "paint":{
           'circle-color': "black",
@@ -45,7 +45,7 @@ map.on('style.load', function() {
     "source-layer": "Stations"
       
   });
-    
+    /*
     map.addSource('importantpoints', {
             'type': 'geojson',
             'data': 'data/importantpoints.geojson'
@@ -63,6 +63,7 @@ map.on('style.load', function() {
       }
       
   });
+    */
   
     swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: "The Ottawa, Arnprior, and Parry Sound Railway connected Ontario cities from 1897 to 1959. While its presence permitted the growth of these cities for a period of time, its discontinued use also encouraged some to decline in more recent years." + "</br></br>" + "To explore the impacts of the railway throughout history, click 'Fly To' to be brought to different locations along the now abandoned tracks. At some locations, you will be able to view maps from that time period over the modern basemap. While at a location, adjust the Time Period slider to view information for each period.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
     
