@@ -86,12 +86,31 @@ map.on("click", function(e) {
         includeGeometry: true,
         layers: ["pointsLayer"]
     }, function (err, features) {
-        //FIRST: We will change the color of the dissemination area we're hovering over
 
-        if (!err && features.length && features[0].properties[periodIndex].Name != null) { //if no error, and features.length is 'true' (meaning there's stuff in there) then do the following
+        //if there is text and image
+        if (!err && features.length && features[0].properties[periodIndex].Text != null && features[0].properties[periodIndex].imageURL != null) { 
           popup.setLngLat(e.lngLat)
               .setHTML(
-                "<center><h2>Name: " + features[0].properties[periodIndex].Name + "</h2>"
+                "<center><h2>Name: " + features[0].properties[periodIndex].Text + "</h2>" + "</br>" + "<center><img src='" + 
+              features[0].properties[periodIndex].imageURL + "'"
+              )
+              .addTo(map);
+        }
+        
+        //if there is just text
+        else if (!err && features.length && features[0].properties[periodIndex].Text != null) { 
+          popup.setLngLat(e.lngLat)
+              .setHTML(
+                "<center><h2>Name: " + features[0].properties[periodIndex].Text + "</h2>"
+              )
+              .addTo(map);
+        }
+        
+        //if there is just an image
+        else if (!err && features.length && features[0].properties[periodIndex].imageURL != null) { 
+          popup.setLngLat(e.lngLat)
+              .setHTML(
+                "<center><img src='" + features[0].properties[periodIndex].imageURL + "'"
               )
               .addTo(map);
         }
