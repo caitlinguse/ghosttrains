@@ -74,7 +74,7 @@ map.on('style.load', function() {
             popup.remove();
         });
 });
-/*
+
 var popup = new mapboxgl.Popup({
   closeButton: true,
   closeOnClick: true
@@ -88,20 +88,20 @@ map.on("click", function(e) {
     }, function (err, features) {
 
         //if there is text and image
-        if (!err && features.length && features[0].properties[periodIndex].Text != null && features[0].properties[periodIndex].imageURL != null) { 
+        if (!err && features.length && features[0].properties[periodIndex].name != null && features[0].properties[periodIndex].imageURL != null) { 
           popup.setLngLat(e.lngLat)
               .setHTML(
-                "<center><h2>Name: " + features[0].properties[periodIndex].Text + "</h2>" + "</br>" + "<center><img src='" + 
-              features[0].properties[periodIndex].imageURL + "'"
+                "<div class='scroll'><center><h2>Name: " + features[0].properties[periodIndex].name + "</h2>" + "</br>" + "<img src='" + 
+              features[0].properties[periodIndex].imageURL + "' style='width:300px;'</center></div>"
               )
               .addTo(map);
         }
         
         //if there is just text
-        else if (!err && features.length && features[0].properties[periodIndex].Text != null) { 
+        else if (!err && features.length && features[0].properties[periodIndex].name != null) { 
           popup.setLngLat(e.lngLat)
               .setHTML(
-                "<center><h2>Name: " + features[0].properties[periodIndex].Text + "</h2>"
+                "<center><h2>Name: " + features[0].properties[periodIndex].name + "</h2>"
               )
               .addTo(map);
         }
@@ -122,4 +122,3 @@ map.on("click", function(e) {
     });
     
 });
-*/

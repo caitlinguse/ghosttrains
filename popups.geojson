@@ -1,4 +1,4 @@
-var popups = {
+{
   "type": "FeatureCollection",
   "features": [
     {
@@ -13,21 +13,21 @@ var popups = {
       "properties": [
           {
           "Time Period": "Early Days: 1860-1899",
-          "Title": "random ghost feature",
+          "name": "random ghost feature",
           "Information": "Paragraph describing location",
-          "Image URL": ""
+          "imageURL": "data/images/highlandinn.jpg"
           },
           {
           "Time Period": "Railyway Heydays: 1900-1923",
-          "Title": "random ghost feature",
+          "name": "random ghost feature",
           "Information": "Paragraph describing location",
-          "Image URL": ""
+          "imageURL": "data/images/highlandinn.jpg"
           },
           {
           "Time Period": "Later Days, Decline  & Legacy: 1945 to Present",
-          "Title": "random ghost feature",
+          "name": "random ghost feature",
           "Information": "Paragraph describing location",
-          "Image URL": ""
+          "imageURL": "data/images/highlandinn.jpg"
           }
         ]
     },
@@ -41,10 +41,10 @@ var popups = {
           45.41520875387228
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Seguin Falls station",
         "description": "Mile 28.2.  Station number 943a. Telegraph codes SF/FS."
-      }
+      }]
     },
     
     {
@@ -56,10 +56,10 @@ var popups = {
           45.55501726039209
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Kearney station",
         "description": "Mile 56.6. Station numbers 940a/51804. Telegraph code KN."
-      }
+      }]
     },
     
     {
@@ -71,10 +71,10 @@ var popups = {
           45.55198567055761
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Algonquin Park station",
         "description": "Mile 95.8.  Station number 935a. Telegraph code CH."
-      }
+      }]
     },
     
     {
@@ -86,10 +86,10 @@ var popups = {
           45.49544383354203
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Whitney station",
         "description": "Mile 118.4. Station numbers 933a/37874. Telegraph code WN."
-      }
+      }]
     },
     
     {
@@ -101,10 +101,10 @@ var popups = {
           45.48778841017188
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Barry's Bay station",
         "description": "Mile 155.2.  Station number 930a/37836.  Telegraph code BY. Station exists in situ."
-      }
+      }]
     },
     
     {
@@ -116,10 +116,10 @@ var popups = {
           45.55398795949882
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Killaloe station",
         "description": "Mile 170. Station numbers 928a/37818. Telegraph code WS."
-      }
+      }]
     },
     
     {
@@ -131,10 +131,10 @@ var popups = {
           45.52827674600106
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Eganville station",
         "description": "Mile 186.8. Station numbers924a/37796. Telegraph code VI. Still existed in 2010 in situ.<img src=\"http://img.groundspeak.com/waymarking/0484f656-55e6-489e-9c20-3668d83a7f89.JPG\"/>"
-      }
+      }]
     },
     
     {
@@ -146,10 +146,10 @@ var popups = {
           45.49257920225921
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Douglas station",
         "description": "Mile 197.1. Station numbers 922a/37782. Telegraph code DO."
-      }
+      }]
     },
     
     {
@@ -161,10 +161,10 @@ var popups = {
           45.46888385269959
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Renfrew station",
         "description": "Mile 209. Station number 919a. Telegraph code RN."
-      }
+      }]
     },
     
     {
@@ -176,10 +176,10 @@ var popups = {
           45.43316600697178
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Arnprior station",
         "description": "Mile 225.4. Station numbers 916a/37740. Telegraph code R."
-      }
+      }]
     },
     
     {
@@ -191,12 +191,12 @@ var popups = {
           45.5471586599495
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Cache Lake Trestle POP#1"
-      }
+      }]
     },
     
     {
@@ -208,13 +208,13 @@ var popups = {
           45.320560329438194
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Depot Harbor POP#2",
         "description": "Mile 0.0. Station numbers 948a/51576. Telegraph code HR. <img src=\"http://data2.archives.ca/ap/c/c001685.jpg\"/>"
-      }
+      }]
     },
     
     {
@@ -226,10 +226,10 @@ var popups = {
           45.41520875387228
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Seguin Falls station",
         "description": "Mile 28.2.  Station number 943a. Telegraph codes SF/FS."
-      }
+      }]
     },
     
     {
@@ -241,13 +241,13 @@ var popups = {
           45.55501726039209
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Kearney station POP #1",
         "description": "Mile 56.6. Station numbers 940a/51804. Telegraph code KN."
-      }
+      }]
     },
     
     {
@@ -259,13 +259,13 @@ var popups = {
           45.55198567055761
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Algonquin Park station (Highland Inn)",
         "description": "Mile 95.8.  Station number 935a. Telegraph code CH."
-      }
+      }]
     },
     
     {
@@ -277,10 +277,10 @@ var popups = {
           45.49544383354203
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Whitney station",
         "description": "Mile 118.4. Station numbers 933a/37874. Telegraph code WN."
-      }
+      }]
     },
     
     {
@@ -292,13 +292,13 @@ var popups = {
           45.48778841017188
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Barry's Bay station POP#1",
         "description": "Mile 155.2.  Station number 930a/37836.  Telegraph code BY. Station exists in situ."
-      }
+      }]
     },
     
     {
@@ -310,13 +310,13 @@ var popups = {
           45.55398795949882
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Killaloe station POP#1",
         "description": "Mile 170. Station numbers 928a/37818. Telegraph code WS."
-      }
+      }]
     },
     
     {
@@ -328,10 +328,10 @@ var popups = {
           45.52827674600106
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Eganville station",
         "description": "Mile 186.8. Station numbers924a/37796. Telegraph code VI. Still existed in 2010 in situ.<img src=\"http://img.groundspeak.com/waymarking/0484f656-55e6-489e-9c20-3668d83a7f89.JPG\"/>"
-      }
+      }]
     },
     
     {
@@ -343,10 +343,10 @@ var popups = {
           45.49257920225921
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Douglas station",
         "description": "Mile 197.1. Station numbers 922a/37782. Telegraph code DO."
-      }
+      }]
     },
     {
       "type": "Feature",
@@ -357,10 +357,10 @@ var popups = {
           45.46888385269959
         ]
       },
-      "properties": {
+      "properties": [{
         "name": "Renfrew station",
         "description": "Mile 209. Station number 919a. Telegraph code RN."
-      }
+      }]
     },
     {
       "type": "Feature",
@@ -371,23 +371,23 @@ var popups = {
           45.43316600697178
         ]
       },
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Arnprior station POP#1",
         "description": "Mile 225.4. Station numbers 916a/37740. Telegraph code R."
-      }
+      }]
     },
     {
       "type": "Feature",
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Diamonds Crossing POP#1",
         "Description": ""
-      },
+      }],
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -398,12 +398,12 @@ var popups = {
     },
     {
       "type": "Feature",
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Depot Harbour POP#1"
-      },
+      }],
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -414,12 +414,12 @@ var popups = {
     },
     {
       "type": "Feature",
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Depot Harbour POP#3"
-      },
+      }],
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -430,12 +430,12 @@ var popups = {
     },
     {
       "type": "Feature",
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "JRBoother23 POP#1"
-      },
+      }],
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -447,12 +447,12 @@ var popups = {
     
     {
       "type": "Feature",
-      "properties": {
+      "properties": [{
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "Killaloe POP#2"
-      },
+      }],
       "geometry": {
         "type": "Point",
         "coordinates": [
