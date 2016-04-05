@@ -8,19 +8,19 @@
   "Time Period": "Early Days: 1860-1899",
   "Title": "Diamonds Crossing",
   "Information": "",
-  "ImageURL1": "data/images/.jpg"
+  "ImageURL1": "data/images/diamondcrossing1.jpg"
   },
   {
   "Time Period": "Railyway Heydays: 1900-1923",
   "Title": "Diamonds Crossing",
   "Information": "",
-  "ImageURL1": "data/images/.jpg"
+  "ImageURL1": "data/images/diamondcrossing2.jpg"
   },
   {
   "Time Period": "Later Days, Decline  & Legacy: 1945 to Present",
   "Title": "Diamonds Crossing",
   "Information": "",
-  "ImageURL1": "data/images/.jpg"
+  "ImageURL1": "data/images/diamondcrossing3.jpg"
   }
 ],
 "geometry": {
@@ -119,8 +119,8 @@
 "geometry": {
   "type": "Point",
   "coordinates": [
-    	-78.5771,
-      45.5472
+    -78.5771,
+    45.5472
   ]
 }
 },

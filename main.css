@@ -78,7 +78,17 @@ div.scroll {
     font: 13px 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
     position: fixed;
     right: 10px;
+    bottom: 6px;
+    padding: 10px;
+}
+
+#footer2 {
+    font: 13px 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;
+    position: fixed;
+    right: 10px;
     bottom: 3px;
+    padding: 10px;
+    text-decoration: underline;
 }
 
 #fly {
