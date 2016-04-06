@@ -94,8 +94,9 @@ map.on('style.load', function() {
       "source": "stations",
       "layout": {},
       "paint":{
-          'circle-color': "black",
-        'circle-radius': 5
+          'circle-color': "#a50f15",
+          'circle-radius': 4,
+          'circle-opacity': 0.7
       },
     "source-layer": "Stations"
       
@@ -112,7 +113,7 @@ map.on('style.load', function() {
       "layout": {},
       "interactive": true,
       "paint":{
-        'circle-color': "blue",
+        'circle-color': "#fb6a4a",
         'circle-radius': 10,
         'circle-opacity': 1
       }
@@ -130,16 +131,16 @@ map.on('style.load', function() {
       "layout": {},
       "interactive": true,
       "paint":{
-        'circle-color': "green",
+        'circle-color': "#fee5d9",
         'circle-radius': 10,
-        'circle-opacity': 1
+        'circle-opacity': 0.6
       }
       
   });
   
     
   
-    swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: "The Ottawa, Arnprior, and Parry Sound Railway connected Ontario cities from 1897 to 1959. While its presence permitted the growth of these cities for a period of time, its discontinued use also encouraged some to decline in more recent years." + "</br></br>" + "To explore the impacts of the railway throughout history, click 'Fly To' to be brought to different locations along the now abandoned tracks. At some locations, you will be able to view maps from that time period over the modern basemap. While at a location, adjust the Time Period slider to view information for each period.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
+    swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: " “It was the shortest grain route to the Atlantic through the wilds of central Ontario, its trains arriving and departing every twenty minutes. It was the longest railway ever build and owned by one man in Canada. It was the Ottawa Arnprior and Parry Sound Railway. Today it is a trail of ghost towns.” " + "</br></br>" + "Take a tour through the rise, heyday and decline of the major towns and locations along it's route via the 'Fly To' feature along the now abandoned tracks. Watch out for digitized historic fire insurance maps which detail the ghost towns that were once bustling with commerce and life. While at a location, adjust the Time Period slider to view information for each period." + "</br></br>" + "Further, explore the tracks yourself to find abandoned interactive features including those which detail the life of the OA&PS's iconic figure, JR Booth." + "</br></br>" + "Finally, navigate to <a href='http://www.exporail.org/can_rail/Canadian%20Rail_no156_1964.pdf'> LINK TEXT </a> for a detailed history of the OA&PS Railroad.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
     
         // get the time period (0-3)
         document.getElementById('slider').addEventListener('input', function(e) {

@@ -45,7 +45,7 @@
   "Time Period": "Railyway Heydays: 1900-1923",
   "Title": "JR Booth",
   "Information": "As a natural extension of milling, Booth’s operations had grown to include a far-reaching transportation network. His involvement with forming and financing the Canada Atlantic Railway in 1879 [see Donald Alexander Macdonald* (Sandfield); William Goodhue Perley*] had drawn him into construction when the original proponents were unable to complete the project. He embraced this new phase of his career with enthusiasm. Railways offered his lumber business three major advantages: reduced labour costs on timber drives, freedom from the seasonal constraints on shipping, and speed. In 1882 Booth completed the 136-mile linkage of the CAR between Ottawa and Coteau-Landing on the St Lawrence, from which point the line eventually secured access to the Central Vermont; initially, the crossing had to be done by barge, but in 1890 this interruption was eliminated by the opening of a railway bridge across the river. To link the pinelands of Georgian Bay, his own upper limits, and the Ottawa River, Booth had started in 1884–86 with a small railway connecting lakes Nipissing and Nosbonsing. Next, the Ottawa, Arnprior and Renfrew and Ottawa and Parry Sound railways were chartered in 1888 and amalgamated in 1891 as the Ottawa, Arnprior and Parry Sound Railway, which was built in 1892–96. During construction, in 1893 Booth successfully disputed the rights to a strategically important pass near Wilno, which the rival Canadian Pacific had also claimed, and he sought to influence the southern boundary of the newly created Algonquin Park [see Aubrey White*] to avoid conflict with his line. (In the end, it ran through the park and Booth secured limits there.) Apart from the advantage the OAPS offered Booth in the lumber trade, for others the route cut 800 miles off the journey from Chicago to Montreal, with mile-a-minute service along the Ottawa-Montreal segment. To secure even more traffic, especially grain, Booth established elevators at Depot Harbour near Parry Sound, as well as at Duluth, Milwaukee, and Coteau-Landing. He eventually added a small fleet of ships to what was recognized as the largest privately owned railway in the world. The OAPS was merged in 1899 into the Canada Atlantic, and in 1904 Booth sold it for $14 million to the Grand Trunk, which he served as a director until it became part of the Canadian National system.",
-  "ImageURL1": "data/images/jr-booth.jpg",
+  "ImageURL1": "data/images/jr_booth.jpg",
   "ImageURL2": "data/images/boothmills_ottawa.jpg"
   },
   {
@@ -59,8 +59,8 @@
 "geometry": {
   "type": "Point",
   "coordinates": [
-    -76.70825958251953,
-     45.469280615977105
+    -75.7721,
+     45.3591
   ]
 }
 },
