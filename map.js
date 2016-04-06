@@ -96,7 +96,7 @@ map.on('style.load', function() {
       "paint":{
           'circle-color': "#a50f15",
           'circle-radius': 4,
-          'circle-opacity': 0.7
+          'circle-opacity': 0.7,
       },
     "source-layer": "Stations"
       
@@ -104,7 +104,7 @@ map.on('style.load', function() {
     
     map.addSource('popupsFlyTo', {
             'type': 'geojson',
-            'data': 'popups.flyto.geojson'
+            'data': 'data/popups.flyto.geojson'
         });
     map.addLayer({
       "id": "popupFlyToLayer",
@@ -122,7 +122,7 @@ map.on('style.load', function() {
   
   map.addSource('popups', {
             'type': 'geojson',
-            'data': 'popups.ghost.geojson'
+            'data': 'data/popups.ghost.geojson'
         });
     map.addLayer({
       "id": "popupLayer",
@@ -196,20 +196,22 @@ map.on("click", function(e) {
         layers: ["popupFlyToLayer"]
     }, function (err, features) {
         
+        // Loop through the images stored with each point (number of images varies)
         var i = 1;
-        var imgname = "ImageURL" + i;
+        var imgname = "ImageURL" + i; // Image URLS in the GeoJSON are all stored in this format
         var string = "";
+        // The properties of each Feature is an array of 3 elements, each containing info specific to a period. 
+        //i.e. 0th element is 1860-1899
         while (features[0].properties[periodIndex][imgname] != null) {
-            string = string + "<img src='" + features[0].properties[periodIndex][imgname] + "' style='width:300px;'</br>";
+            // Add image information in a string to later set HTML
+            string = string + "</br><img src='" + features[0].properties[periodIndex][imgname] + "' style='width:300px;'</br>";
             i++;
             var imgname = "ImageURL" + i;
         }
 
-        //if there is text and image
         if (!err && features.length && features[0].properties[periodIndex].Title != null && features[0].properties[periodIndex].ImageURL1 != null) { 
           popup.setLngLat(e.lngLat)
-              .setHTML(
-                "<div class='scroll'><center><h2>" + features[0].properties[periodIndex].Title + "</h2> <p>" + features[0].properties[periodIndex].Information + "</p>" + 
+              .setHTML("<div class='scroll'><center><h2>" + features[0].properties[periodIndex].Title + "</h2> <p>" + features[0].properties[periodIndex].Information + "</p>" + 
               string + "</center></div>"
               )
               .addTo(map);
