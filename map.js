@@ -24,7 +24,7 @@ var periods = [
 ];
 periodLabel.textContent = periods[periodIndex];
 
-//fly to
+// Fly to
 var isAtStart = true;
 var isAtEnd = false;
 var coord_index = 0;
@@ -67,6 +67,8 @@ function fly() {
             }
         });
     }
+    
+    // Last click will zoom back out to full view of tracks
     else {
         map.flyTo({
             center: target,
@@ -102,6 +104,7 @@ map.on('style.load', function() {
       
   });
     
+    // Major popups for each fly to location
     map.addSource('popupsFlyTo', {
             'type': 'geojson',
             'data': 'data/popups.flyto.geojson'
@@ -120,7 +123,8 @@ map.on('style.load', function() {
       
   });
   
-  map.addSource('popups', {
+    // More detailed popups of the towns 
+    map.addSource('popups', {
             'type': 'geojson',
             'data': 'data/popups.ghost.geojson'
         });
@@ -139,10 +143,10 @@ map.on('style.load', function() {
   });
   
     
-  
+  // Initial welcome popup
     swal({   title: "<span style=color:#F8BB86>" + "Ottawa, Arnprior, and Parry Sound Railway" + "<span>",   text: " “It was the shortest grain route to the Atlantic through the wilds of central Ontario, its trains arriving and departing every twenty minutes. It was the longest railway ever build and owned by one man in Canada. It was the Ottawa Arnprior and Parry Sound Railway. Today it is a trail of ghost towns.” " + "</br></br>" + "Take a tour through the rise, heyday and decline of the major towns and locations along it's route via the 'Fly To' feature along the now abandoned tracks. Watch out for digitized historic fire insurance maps which detail the ghost towns that were once bustling with commerce and life. While at a location, adjust the Time Period slider to view information for each period." + "</br></br>" + "Further, explore the tracks yourself to find abandoned interactive features including those which detail the life of the OA&PS's iconic figure, JR Booth." + "</br></br>" + "Finally, navigate to <a href='http://www.exporail.org/can_rail/Canadian%20Rail_no156_1964.pdf'> this link </a> for a detailed history of the OA&PS Railroad.",  confirmButtonColor: "#DD6B55", confirmButtonText: "Explore!", html: true });
     
-        // get the time period (0-3)
+        // Slider - gets the time period as an index (0-2)
         document.getElementById('slider').addEventListener('input', function(e) {
             periodIndex = parseInt(e.target.value, 10);
             periodLabel.textContent = periods[periodIndex];
@@ -162,10 +166,15 @@ map.on("click", function(e) {
         layers: ["popupLayer"]
     }, function (err, features) {
         
+        // Loop through the images stored with each point (number of images varies)
         var i = 1;
-        var imgname = "ImageURL" + i;
+        var imgname = "ImageURL" + i; // Image URLS in the GeoJSON are all stored in this format
         var string = "";
+        
+        // The properties of each Feature is an array of 3 elements, each containing info specific to a period. 
+        //i.e. 0th element is 1860-1899
         while (features[0].properties[periodIndex][imgname] != null) {
+            // Add image information in a string to later set HTML
             string = string + "<img src='" + features[0].properties[periodIndex][imgname] + "' style='width:300px;'</br>";
             i++;
             var imgname = "ImageURL" + i;
@@ -189,21 +198,18 @@ map.on("click", function(e) {
     
 });
 
+// Same info features for the fly-to popups 
 map.on("click", function(e) {
     map.featuresAt(e.point, {
         radius: 30,
         includeGeometry: true,
         layers: ["popupFlyToLayer"]
     }, function (err, features) {
-        
-        // Loop through the images stored with each point (number of images varies)
         var i = 1;
-        var imgname = "ImageURL" + i; // Image URLS in the GeoJSON are all stored in this format
+        var imgname = "ImageURL" + i; 
         var string = "";
-        // The properties of each Feature is an array of 3 elements, each containing info specific to a period. 
-        //i.e. 0th element is 1860-1899
+        
         while (features[0].properties[periodIndex][imgname] != null) {
-            // Add image information in a string to later set HTML
             string = string + "</br><img src='" + features[0].properties[periodIndex][imgname] + "' style='width:300px;'</br>";
             i++;
             var imgname = "ImageURL" + i;
