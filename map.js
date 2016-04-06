@@ -1,3 +1,12 @@
+/*******************************************************
+ * Created by Jennifer Chiang, Caitlin Guse, and Thomas Willington
+ * April 2016
+ * 
+ * GGR400 - Web Mapping 
+ * University of Toronto - St. George Campus 
+ * Presented to Michael Widener
+ *******************************************************/
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2FpdGxpbmd1c2UiLCJhIjoiY2lqbm4zZTNuMDBvM3VmbTVjM2M3eWxkayJ9.FodgOirhTvC5b_-woC5MTg';
 
 var map = new mapboxgl.Map({
@@ -198,7 +207,7 @@ map.on("click", function(e) {
     
 });
 
-// Same info features for the fly-to popups 
+// Same info for the fly-to popups 
 map.on("click", function(e) {
     map.featuresAt(e.point, {
         radius: 30,
